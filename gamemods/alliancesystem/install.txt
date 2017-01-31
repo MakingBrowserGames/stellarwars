@@ -1,0 +1,10 @@
+alter table uni1_users add bonus_page_time2 int(11) not null default '0';
+alter table uni1_users add fleet_bonus_time int(11) not null default '0';
+alter table uni1_users add res_bonus_time int(11) not null default '0';
+alter table uni1_users add def_bonus_time int(11) not null default '0';
+
+Insert into the left Menu 4 new things with		
+<div><a href="?page=defBonus">Defense Bonus</a></div>
+<div><a href="?page=fleetBonus">Fleet Bonus</a></div>
+<div><a href="?page=resBonus">Daily Resource Package</a></div>
+<div><a href="?page=lucky">Lucky 7 Days Package</a></div>

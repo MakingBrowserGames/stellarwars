@@ -1,0 +1,20 @@
+Welcome to the Install for Immunity
+
+Get the .php file into .../includes/pages/game
+Get the .tpl file into .../styles/templates/game
+
+
+Go to your Database and insert 2 new Fields
+alter table uni1_users add next_immunity int 11 not null default '0';
+alter table uni1_users add immunity_until int 11 not null default '0';
+	
+	Replace line 316 with
+	
+	if ((isset($MissionInfo['Ship'][209]) || isset($MissionInfo['Ship'][219])) && $USER['immunity_until'] < TIMESTAMP && isModulAvalible(MODULE_MISSION_RECYCLE) && !($GetInfoPlanet['der_metal'] == 0 && $GetInfoPlanet['der_crystal'] == 0)) 
+	Replace line 320 with
+	
+	if (isset($MissionInfo['Ship'][208]) && $MissionInfo['planettype'] == 1 && isModulAvalible(MODULE_MISSION_COLONY) && $USER['immunity_until'] < TIMESTAMP ) 
+	
+	Place line 326 with
+	
+	if (!$YourPlanet && self::OnlyShipByID($MissionInfo['Ship'], 210) && isModulAvalible(MODULE_MISSION_SPY) && $USER['immunity_until'] < TIMESTAMP )

@@ -1,0 +1,38 @@
+<?php
+class ShowNotesPage extends AbstractPage
+{
+	public static $requireModule = MODULE_NOTICE;
+
+	function __construct() 
+	{
+		parent::__construct();
+		$this->setWindow('popup');
+		$this->initTemplate();
+	}
+	
+	function show()
+	{
+		global $LNG, $USER;
+		
+		$notesResult 	= $GLOBALS['DATABASE']->query("SELECT * FROM ".NOTES." WHERE owner = ".$USER['id']." ORDER BY priority DESC, time DESC;");
+		$notesList		= array();
+		
+		while($notesRow = $GLOBALS['DATABASE']->fetch_array($notesResult))
+		{
+			$notesList[$notesRow['id']]	= array(
+				'time'		=> _date($LNG['php_tdformat'], $notesRow['time'], $USER['timezone']),
+				'title'		=> $notesRow['title'],
+				'size'		=> strlen($notesRow['text']),
+				'priority'	=> $notesRow['priority'],
+			);
+		}
+		
+		$GLOBALS['DATABASE']->free_result($notesResult);
+		
+		$this->tplObj->assign_vars(array(
+			'notesList'	=> $notesList,
+		));
+		
+		$this->display('page.radio.default.tpl');
+	}
+}
