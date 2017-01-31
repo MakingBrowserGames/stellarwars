@@ -1,0 +1,5 @@
+Insert in your SQL Database
+ALTER TABLE uni1_users ADD urlaubs_end int(11) NOT NULL DEFAULT '0';
+
+The file class.ShowSettingsPage.php should be located at includes/pages/game folder
+by QwataKayean
