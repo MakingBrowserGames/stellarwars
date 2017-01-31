@@ -1,0 +1,10 @@
+INSTALL STEPS
+• All Database queries are located inside DB-Query.txt
+• Queries ended with _price, in '0', there is the product price
+• Queries ended with _time, should not be changed, and the Default is 0
+• Queries ended with _amount, should not be changed, and the Default is 0
+• To edit the factor price, this is located on the class.ShowBlackMarketPage.php and uses the following code: $(Item)NewPrice = $(Item)DM * 2; , as example of Metal Mine , $MetalMineNewPrice = $MetalMineDM * 2;
+• To edit the cooldown time, this is located on the class.ShowBlackMarketPage.php and uses the following code: '".(TIMESTAMP + Seconds)."' , and you insert the Seconds of waiting, for example of one day, 86400 seconds. Do not forget to edit page.blackmarket.body.tpl
+• class.ShowBlackMarketPage.php should be located at "/root/includes/pages/game"
+• page.blackmarket.body.tpl should be located at "/root/styles/templates/game"
+• jquery.countdown.js should be located at "/root/scripts/game"
