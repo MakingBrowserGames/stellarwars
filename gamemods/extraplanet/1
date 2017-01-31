@@ -1,0 +1,21 @@
+- The files from "styles\templates\game" should be located at "/styles/template/game"
+- The files from "includes\classes" should be located at "/includes/classes"
+- The files from "includes\pages\game" should be located at "/includes/pages/game"
+
+############## Add in your Database
+Add the following Queries on your Database
+ALTER TABLE `uni1_users` ADD `extra_planet` int(11) NULL DEFAULT '5';
+##############
+############## Insert in the styles/template/game/main.navigation.tpl
+<li><a href="game.php?page=extraPlanet">Purchase Planet</a></li>
+##############
+############## Add in CUSTOM.php of each language
+$LNG['extraone']     = 'You can buy one new planet after you have colonized 30 planets.(max number of allowed planets)';
+$LNG['extratwo'] = 'You have bought';
+$LNG['extratree'] = '5 planets';
+$LNG['extrafour'] = 'You have to send out a new colonisation mission in order to use your newly planet ';
+$LNG['extrafive'] = 'Buy planet for 30.000 DM';
+$LNG['error_3']= 'You dont have enough Dark Matter!!';
+##############
+
+
