@@ -1,0 +1,14 @@
+put in database.
+
+ALTER TABLE `uni1_planets`  ADD  `bankm` INT(100) NOT NULL DEFAULT '0';
+ALTER TABLE `uni1_planets`  ADD  `bankc` INT(100) NOT NULL DEFAULT '0';
+ALTER TABLE `uni1_planets`  ADD  `bankd` INT(100) NOT NULL DEFAULT '0';
+
+=========================================================================
+put in left_menu.tpl
+
+ <li><a href="?page=bank"STYLE="color: #01DF01;"><blink>Banking</a></li>
+=========================================================================
+
+
+max banking are +- 2.2miljard.
