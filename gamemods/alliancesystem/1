@@ -1,0 +1,9 @@
+• The file "class.ShowDefBonusPage.php" should be replaced in "/root/includes/pages/game"
+• The file "class.ShowFleetBonusPage.php" should be replaced in "/root/includes/pages/game"
+• The file "class.ShowLuckyPage.php" should be replaced in "/root/includes/pages/game"
+• The file "class.ShowResBonusPage.php" should be replaced in "/root/includes/pages/game"
+• The file "page.defbonus.default.tpl" should be replaced in "/root/styles/templates/game"
+• The file "page.fleetbonus.default.tpl" should be replaced in "/root/styles/templates/game"
+• The file "page.lucky.default.tpl" should be replaced in "/root/styles/templates/game"
+• The file "page.resbonus.default.tpl" should be replaced in "/root/styles/templates/game"
+• Insert the querys from Install.txt in your phpMyAdmin Panel
